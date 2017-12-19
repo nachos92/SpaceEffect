@@ -1,0 +1,431 @@
+/**
+* @mainpage
+*
+* <p>Questa vuole essere una riproposizione semplificata dell'arcade game Asteroids,
+* sfruttando la libreria grafica esterna Allegro 5 (http://www.allegro.cc).</p>
+* <p><b>Il gioco</b>: ruotando la navicella e spostandola lungo la sua direzione, si schivano
+* le meteore in arrivo e vi si spara contro cercando di distruggerne quante più possibili,
+* ottenendo punteggi diversi a seconda del tipo di meteora.
+* Il giocatore parte con 3 vite, che diminuiscono ogni volta che ci si schianta contro una meteora,
+* fino ad arrivare a 0 vite, momento nel quale viene dichiarato Game Over.
+* A ciò sono state aggiunte le schermate iniziali e finali (game over), nonchè la possibilità
+* di mettere in pausa il gioco e la musica, visualizzando una opportuna schermata.</p>
+* <p>Il programma è diviso in un modulo (creazione.cc e inizializzazione.h) che si occupa
+* delle inizializzazioni delle entità di tipo Player, Meteora e Colpo, un modulo (playTime.cc e gioco.h)
+* che comprende funzioni per implementare il gioco in se', quindi la generazione in (istanti casuali)
+* delle meteore, gli spostamenti di queste ultime, della navicella e dei colpi sparati,
+* la verifica delle possibili collisioni e le variazioni di punteggio/vita. Infine
+* vi è un ultimo modulo (videoRender.cc e render.h) che, come si deduce dai nomi dei file,
+* si occupa della rappresentazione a video di tutti gli elementi del gioco e delle statistiche
+* (vite rimanenti e punteggio), nonchè delle schermate iniziali, di pausa, e di gameover. </p>
+* <p>La funzione main(), oltre a chiamare le funzioni necessarie dei vari moduli,
+* implementa il meccanismo degli "stati di gioco", occupandosi dei cambi di stato di fronte
+* ad opportuni input. Si occupa inoltre della inizializzazione/gestione/deallocazione degli elementi
+* della libreria Allegro 5 (ALLEGRO_DISPLAY,ALLEGRO_EVENT_QUEUE,ALLEGRO_TIMER,ALLEGRO_BITMAP,
+* ALLEGRO_SAMPLE, ALLEGRO_SAMPLE_INSTANCE,ALLEGRO_FONT).
+* </p>
+*/
+
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
+#include <cmath>
+#include <cassert>
+#include "oggetti.h"
+#include "inizializzazione.h"
+#include "gioco.h"
+#include "render.h"
+#include <iostream>
+using namespace std;
+
+/**Larghezza (in pixels) del display */
+#define WIDTH 800
+
+/**Altezza (in pixels) del display. */
+#define HEIGHT 640
+
+/**Frames per second. Usato per settare il valore di tempo del timer. */
+#define FPS 30
+
+/**Indica il numero max di colpi che possono essere sparati
+* prima che almeno uno non scompaia. */
+#define MAXCOLPI 5
+
+/**Indica il numero max di meteore che possono essere "vive"
+* prima che almeno una non scompaia. */
+#define MAXMETEORE 7
+
+
+
+
+/** Facilita il controllo dello stato di un tasto non avendo assegnato
+* ad ogni tasto una posizione "numerica" (nell'array keys[]).
+*/
+enum KEYS {UP,DOWN,LEFT,RIGHT,SPACE,ESCAPE};
+
+/**Se un tasto KEYS è premuto, il suo valore è true; diventa false
+* al suo rilascio. */
+bool keys[] = {false,false,false,false,false};
+
+/**Facilita il controllo dello stato attuale, invece di effettuare controlli
+* su valori numerici. */
+enum STATI {MENU,PLAY,PAUSA,GAMEOVER};
+
+
+/** Aggiorna la variabile che tiene traccia dello stato attuale,
+* assegnandogli il nuovoStati (vedi STATI).
+* Se e' attivato il debug di 2° livello, vengono stampati
+* su cout i cambiamenti di stato per le variazioni
+* sia in entrata che in uscita.
+*/
+void cambiaStato(int &stato, int nuovoStato);
+
+
+int main() {
+
+  // Utilizzata per terminare l'interfaccia grafica.
+  bool done = false;
+
+  // Usata per temporizzare il render a video.
+  bool redraw = true;
+
+  // Il suo valore è rappresenta uno stato del gioco (STATI).
+  int stato = -1;
+
+  // Variabile usata per la "pausa" e "ripresa" della traccia audio.
+  unsigned int posTracciaAudio;
+
+  //Creazione delle istanze di Player, Colpo e Meteora.
+  Player ship;
+  Colpo colpi[MAXCOLPI];
+  Meteora meteora[MAXMETEORE];
+
+ //Creazione istanze delle variabili di ALLEGRO
+  ALLEGRO_DISPLAY *display = NULL;
+  ALLEGRO_TIMER *timer = NULL;
+  ALLEGRO_EVENT_QUEUE *event_queue;
+  ALLEGRO_FONT *font = NULL;
+  ALLEGRO_FONT *menuFont = NULL;
+  ALLEGRO_FONT *gameoverFont = NULL;
+  ALLEGRO_FONT *punteggioFont = NULL;
+  ALLEGRO_BITMAP *sfondo = NULL;
+  ALLEGRO_BITMAP *iconaMeteora = NULL;
+  ALLEGRO_BITMAP *iconaMeteora1 = NULL;
+  ALLEGRO_BITMAP *iconaMeteora2 = NULL;
+  ALLEGRO_BITMAP *iconaMeteora3 = NULL;
+  ALLEGRO_BITMAP *sfondoMenu = NULL;
+  ALLEGRO_BITMAP *sfondoGameover = NULL;
+  ALLEGRO_BITMAP *heart = NULL;
+  ALLEGRO_SAMPLE *BGmusic = NULL;
+  ALLEGRO_SAMPLE *shot = NULL;
+  ALLEGRO_SAMPLE *explosion = NULL;
+  ALLEGRO_SAMPLE *crash = NULL;
+  ALLEGRO_SAMPLE_INSTANCE *BGmusic_instance = NULL;
+
+  //Inizializzazione della libreria ALLEGRO
+  assert(al_init());
+
+  display = al_create_display(WIDTH,HEIGHT);
+  assert(display);
+  al_set_window_position(display, 300,100);
+
+
+  //Inizializzazione componenti e addon di allegro
+  al_init_primitives_addon();
+  al_install_audio();
+  al_init_image_addon();
+  al_init_font_addon();
+  al_init_ttf_addon();
+  al_init_acodec_addon();
+  al_install_keyboard();
+
+  al_reserve_samples(MAXCOLPI+3);
+
+  srand(time(0));
+
+  initPlayer(ship);
+  initColpi(colpi,MAXCOLPI);
+  initMeteore(meteora,MAXMETEORE);
+
+  //CARICAMENTO file immagine,audio e font.
+  ship.sprite = al_load_bitmap("ship3.png");
+  sfondo = al_load_bitmap("sfondo.jpg");
+  sfondoMenu = al_load_bitmap("sfondoMenu.jpg");
+  sfondoGameover = al_load_bitmap("sfondoGameover3.jpg");
+  iconaMeteora1 = al_load_bitmap("ccomet1.png");
+  iconaMeteora2 = al_load_bitmap("ccomet2.png");
+  iconaMeteora3 = al_load_bitmap("ccomet3.png");
+  heart = al_load_bitmap("heart.png");
+
+  BGmusic = al_load_sample("SW_main.wav");
+  shot = al_load_sample("lasershot.wav");
+  explosion = al_load_sample("explosion.wav");
+  crash = al_load_sample("crash.wav");
+
+  font = al_load_font("me123.ttf", 14,0);
+  menuFont = al_load_font("swFont.ttf", 82, 0);
+  gameoverFont = al_load_font("me123.ttf",64,0);
+  punteggioFont = al_load_font("me123.ttf", 32,0);
+
+  //Fine caricamento file immagine,audio e font.
+
+  ALLEGRO_BITMAP *iconeMeteora[3] = {iconaMeteora1,iconaMeteora2,iconaMeteora3};
+
+  BGmusic_instance = al_create_sample_instance(BGmusic);
+  al_set_sample_instance_playmode(BGmusic_instance,ALLEGRO_PLAYMODE_LOOP);
+  al_attach_sample_instance_to_mixer(BGmusic_instance,al_get_default_mixer());
+
+
+  event_queue = al_create_event_queue();
+  timer = al_create_timer(1.0/FPS);
+
+  al_register_event_source(event_queue,al_get_keyboard_event_source());
+  al_register_event_source(event_queue,al_get_timer_event_source(timer));
+  al_register_event_source(event_queue,al_get_display_event_source(display));
+
+  al_start_timer(timer);
+
+  cambiaStato(stato,MENU);
+
+
+  while(!done) {
+
+    ALLEGRO_EVENT ev;
+    al_wait_for_event(event_queue, &ev);
+
+    if(stato == PLAY)
+      al_play_sample_instance(BGmusic_instance);
+
+
+
+    if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+
+      switch(ev.keyboard.keycode) {
+
+        case ALLEGRO_KEY_UP:
+          keys[UP]= true;
+          break;
+        case ALLEGRO_KEY_DOWN:
+          keys[DOWN] = true;
+          break;
+        case ALLEGRO_KEY_LEFT:
+          keys[LEFT] = true;
+          break;
+        case ALLEGRO_KEY_RIGHT:
+          keys[RIGHT] = true;
+          break;
+        case ALLEGRO_KEY_SPACE:
+          keys[SPACE] = true;
+
+          if(stato == MENU) {
+            al_stop_sample_instance(BGmusic_instance);
+            sleep(1);
+            cambiaStato(stato,PLAY);
+          }
+          else if(stato == PLAY)
+            sparaColpo(colpi,MAXCOLPI,ship,shot);
+          else if(stato == PAUSA) {
+            al_stop_sample_instance(BGmusic_instance);
+            sleep(1);
+            cambiaStato(stato,MENU);
+          }
+          else if(stato == GAMEOVER)
+            cambiaStato(stato,MENU);
+          break;
+
+        case ALLEGRO_KEY_ESCAPE:
+          keys[ESCAPE] = true;
+
+          if(stato == PLAY) {
+
+            //Implementa la messa in pausa della traccia audio specificata.
+            posTracciaAudio = al_get_sample_instance_position(BGmusic_instance);
+            al_set_sample_instance_playing(BGmusic_instance,false);
+
+            cambiaStato(stato,PAUSA);
+          }
+          else if(stato == PAUSA) {
+
+            //Implementa la ripresa della traccia audio dal punto in cui si era
+            //sospesa la riproduzione.
+            al_set_sample_instance_position(BGmusic_instance,posTracciaAudio);
+            al_set_sample_instance_playing(BGmusic_instance,true);
+
+            cambiaStato(stato,PLAY);
+
+          }
+          else if(stato == MENU)
+            done = true;
+          else if(stato == GAMEOVER)
+            done = true;
+          break;
+
+      }
+    }
+
+    else if(ev.type == ALLEGRO_EVENT_KEY_UP) {
+
+
+      switch(ev.keyboard.keycode) {
+
+
+        case ALLEGRO_KEY_UP:
+          keys[UP]= false;
+          break;
+        case ALLEGRO_KEY_DOWN:
+          keys[DOWN] = false;
+          break;
+        case ALLEGRO_KEY_LEFT:
+          keys[LEFT] = false;
+          break;
+        case ALLEGRO_KEY_RIGHT:
+          keys[RIGHT] = false;
+          break;
+        case ALLEGRO_KEY_SPACE:
+          keys[SPACE] = false;
+          break;
+        case ALLEGRO_KEY_ESCAPE:
+          keys[ESCAPE] = false;
+          break;
+      }
+    }
+    else if(ev.type == ALLEGRO_EVENT_TIMER) {
+
+      redraw = true;
+
+      if(keys[UP])
+        muovi(ship);
+
+      if(keys[LEFT])
+        ruotaAntiorario(ship,10);
+
+      if(keys[RIGHT])
+        ruotaOrario(ship,10);
+
+
+      if(stato == PLAY) {
+
+        //Aggiornamento posizioni e verifica collisioni
+        aggiornaColpo(colpi,MAXCOLPI);
+        generaMeteora(meteora,MAXMETEORE, iconeMeteora);
+        aggiornaMeteore(meteora,MAXMETEORE);
+        collisioneColpo(colpi,MAXCOLPI,meteora,MAXMETEORE, ship, explosion);
+        collisioneMeteora(meteora,MAXMETEORE, ship, crash);
+
+        if(ship.vita<=0) {
+          al_stop_sample_instance(BGmusic_instance);
+          cambiaStato(stato,GAMEOVER);
+        }
+
+      }
+      else if(stato == GAMEOVER) {
+
+        if(keys[SPACE]) {
+
+          initPlayer(ship);
+          initMeteore(meteora,MAXMETEORE);
+          initColpi(colpi,MAXCOLPI);
+          cambiaStato(stato, PLAY);
+        }
+      }
+
+    } //FINE ALLEGRO_EVENT_TIMER
+    else if(ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+
+      done = true;
+    }
+
+    // Sezione di RENDERING
+    if(redraw && al_is_event_queue_empty(event_queue)) {
+
+      redraw = false;
+
+
+      if(stato == MENU)
+        schermataMenu(sfondoMenu,menuFont,font);
+
+      else if(stato == PLAY) {
+
+        al_draw_scaled_bitmap(sfondo,0,0,1600,1000,0,0,WIDTH,HEIGHT,0);
+
+        disegnaPlayer(ship);
+        disegnaColpo(colpi, MAXCOLPI);
+        disegnaMeteore(meteora,MAXMETEORE,iconaMeteora);
+
+        playerStat(ship,heart,font);
+      }
+      else if(stato == PAUSA)
+        schermataPausa(gameoverFont,font);
+      else if(stato == GAMEOVER)
+        schermataGameover(sfondoGameover,gameoverFont,punteggioFont,font,ship.punteggio);
+
+
+      al_flip_display();
+      al_clear_to_color(al_map_rgb(0,0,0));
+
+    } //Fine sezione di RENDERING
+  } //FINE WHILE
+
+  // Deallocazione delle variabili di Allegro create.
+  al_destroy_display(display);
+  al_destroy_bitmap(ship.sprite);
+  al_destroy_bitmap(sfondo);
+  al_destroy_bitmap(iconaMeteora1);
+  al_destroy_bitmap(iconaMeteora2);
+  al_destroy_bitmap(iconaMeteora3);
+  al_destroy_sample(crash);
+  al_destroy_sample(explosion);
+  al_destroy_sample(shot);
+  al_destroy_sample(BGmusic);
+  al_destroy_sample_instance(BGmusic_instance);
+  al_destroy_font(font);
+  al_destroy_font(menuFont);
+  al_destroy_font(gameoverFont);
+  al_destroy_font(punteggioFont);
+  al_destroy_timer(timer);
+  al_destroy_event_queue(event_queue);
+
+  return 0;
+}
+
+
+
+
+void cambiaStato(int &stato, int nuovoStato) {
+
+  D2(if (stato == MENU) {
+      cout<<"Uscita da stato MENU"<<endl;
+    }
+    else if (stato == PLAY) {
+      cout<<"Uscita da stato PLAY"<<endl;
+    }
+    else if (stato == PAUSA) {
+      cout<<"Uscita da stato PAUSA"<<endl;
+
+    }
+    else if (stato == GAMEOVER) {
+      cout<<"Uscita da stato GAMEOVER"<<endl;
+    })
+
+  stato = nuovoStato;
+
+  D2(if (stato == MENU) {
+    cout<<"Ingresso in stato MENU"<<endl;
+  }
+  else if (stato == PLAY) {
+    cout<<"Ingresso in stato PLAY"<<endl;
+  }
+  else if (stato == PAUSA) {
+    cout<<"Ingresso in stato PAUSA"<<endl;
+
+  }
+  else if (stato == GAMEOVER) {
+    cout<<"Ingresso in stato GAMEOVER"<<endl;
+  })
+}
+
+

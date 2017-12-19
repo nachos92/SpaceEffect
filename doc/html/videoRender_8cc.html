@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS: Riferimenti per il file src/videoRender.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a>  </div>
+  <div class="headertitle">
+<div class="title">Riferimenti per il file videoRender.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;allegro5/allegro.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_primitives.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_image.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_font.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_ttf.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_audio.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_acodec.h&gt;</code><br/>
+<code>#include &lt;cassert&gt;</code><br/>
+<code>#include &quot;<a class="el" href="oggetti_8h_source.html">oggetti.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="render_8h_source.html">render.h</a>&quot;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:a241aeeb764887ae5e3de58b98f04b16d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>&#160;&#160;&#160;800</td></tr>
+<tr class="separator:a241aeeb764887ae5e3de58b98f04b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>&#160;&#160;&#160;640</td></tr>
+<tr class="separator:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1d315f30fa4a3bd4f8212b59ea8739"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:aff1d315f30fa4a3bd4f8212b59ea8739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affdca280d12fe6f918436bebec337b3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:affdca280d12fe6f918436bebec337b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:a880cc78703c57ee6bca816d3eeb284ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a880cc78703c57ee6bca816d3eeb284ed">disegnaPlayer</a> (<a class="el" href="structPlayer.html">Player</a> ship)</td></tr>
+<tr class="separator:a880cc78703c57ee6bca816d3eeb284ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3170bab04b6170e9e45c2fd6af52d00f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a3170bab04b6170e9e45c2fd6af52d00f">playerStat</a> (<a class="el" href="structPlayer.html">Player</a> ship, ALLEGRO_BITMAP *cuore, ALLEGRO_FONT *textFont)</td></tr>
+<tr class="separator:a3170bab04b6170e9e45c2fd6af52d00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c3b6abcdf4c32a6e45b262a16cc157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a37c3b6abcdf4c32a6e45b262a16cc157">schermataMenu</a> (ALLEGRO_BITMAP *sfondoMenu, ALLEGRO_FONT *menuFont, ALLEGRO_FONT *font)</td></tr>
+<tr class="separator:a37c3b6abcdf4c32a6e45b262a16cc157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db08f1e1a7c21f681944418ff37729a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a7db08f1e1a7c21f681944418ff37729a">schermataPausa</a> (ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *font)</td></tr>
+<tr class="separator:a7db08f1e1a7c21f681944418ff37729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad142aabd13df1d53dbbbfccdb3d000d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#aad142aabd13df1d53dbbbfccdb3d000d">schermataGameover</a> (ALLEGRO_BITMAP *sfondoGameover, ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *punteggioFont, ALLEGRO_FONT *font, const int punteggio)</td></tr>
+<tr class="separator:aad142aabd13df1d53dbbbfccdb3d000d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab259b7ee9f841c688528a0be8d0e40f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#aab259b7ee9f841c688528a0be8d0e40f">disegnaColpo</a> (<a class="el" href="structColpo.html">Colpo</a> colpi[], int nmax)</td></tr>
+<tr class="separator:aab259b7ee9f841c688528a0be8d0e40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9e10983157ca0054df8e332ce1af23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="videoRender_8cc.html#a8b9e10983157ca0054df8e332ce1af23">disegnaMeteore</a> (<a class="el" href="structMeteora.html">Meteora</a> meteora[], int nmax, ALLEGRO_BITMAP *iconaMeteora)</td></tr>
+<tr class="separator:a8b9e10983157ca0054df8e332ce1af23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentazione delle definizioni</h2>
+<a class="anchor" id="ac92ca5ab87034a348decad7ee8d4bd1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FPS&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aed89bd71aee8be823e8a20ec4e093c1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEIGHT&#160;&#160;&#160;640</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff1d315f30fa4a3bd4f8212b59ea8739"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXCOLPI&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="affdca280d12fe6f918436bebec337b3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXMETEORE&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a241aeeb764887ae5e3de58b98f04b16d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIDTH&#160;&#160;&#160;800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle funzioni</h2>
+<a class="anchor" id="aab259b7ee9f841c688528a0be8d0e40f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disegnaColpo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structColpo.html">Colpo</a>&#160;</td>
+          <td class="paramname"><em>colpi</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nmax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disegna ogni colpo attivo come un cerchio pieno di centro dato dal relativo posX e posY. </p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                           {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;nmax; i++) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span>(colpi[i].attivo == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      al_draw_filled_circle(colpi[i].posX,colpi[i].posY,2,al_map_rgb(255,255,255));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8b9e10983157ca0054df8e332ce1af23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disegnaMeteore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMeteora.html">Meteora</a>&#160;</td>
+          <td class="paramname"><em>meteora</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>iconaMeteora</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ogni meteora "in vita" è rappresentata mediante la relativa bitmap. Per facilitare la lettura, gli attributi degli elementi di tipo <a class="el" href="structMeteora.html">Meteora</a> sono stati memorizzati in variabili invece di accedere alle struct ogni volta. </p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">int</span> raggio,bordo,width,height,posX,posY;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">double</span> scala;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;nmax; i++) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span>(meteora[i].inVita == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      raggio = meteora[i].<a class="code" href="structMeteora.html#aeaddd20632e588d8d6f04447c1d446ce">raggio</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      bordo = meteora[i].<a class="code" href="structMeteora.html#a61d7b43c265dc58f2c4a6ac1878b27f8">bordo</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      width = al_get_bitmap_width(meteora[i].sprite);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      height = al_get_bitmap_height(meteora[i].sprite);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      scala = meteora[i].<a class="code" href="structMeteora.html#ac839d9fe014f4588ad3fd6ca2e67d204">scala</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      posX = meteora[i].<a class="code" href="structMeteora.html#ac5de06ee0df95b5fd74d392a9750fad6">posX</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      posY = meteora[i].<a class="code" href="structMeteora.html#a7335b6c20512da0916129af958cde5cb">posY</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      al_draw_scaled_bitmap(meteora[i].sprite,0,0,width, height, posX-(raggio+bordo), posY - raggio,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                (raggio*2 + bordo)*scala,(raggio*2)*scala,0);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="ttc" id="structMeteora_html_ac839d9fe014f4588ad3fd6ca2e67d204"><div class="ttname"><a href="structMeteora.html#ac839d9fe014f4588ad3fd6ca2e67d204">Meteora::scala</a></div><div class="ttdeci">double scala</div><div class="ttdef"><b>Definition:</b> oggetti.h:97</div></div>
+<div class="ttc" id="structMeteora_html_a61d7b43c265dc58f2c4a6ac1878b27f8"><div class="ttname"><a href="structMeteora.html#a61d7b43c265dc58f2c4a6ac1878b27f8">Meteora::bordo</a></div><div class="ttdeci">int bordo</div><div class="ttdef"><b>Definition:</b> oggetti.h:96</div></div>
+<div class="ttc" id="structMeteora_html_a7335b6c20512da0916129af958cde5cb"><div class="ttname"><a href="structMeteora.html#a7335b6c20512da0916129af958cde5cb">Meteora::posY</a></div><div class="ttdeci">int posY</div><div class="ttdef"><b>Definition:</b> oggetti.h:100</div></div>
+<div class="ttc" id="structMeteora_html_aeaddd20632e588d8d6f04447c1d446ce"><div class="ttname"><a href="structMeteora.html#aeaddd20632e588d8d6f04447c1d446ce">Meteora::raggio</a></div><div class="ttdeci">int raggio</div><div class="ttdef"><b>Definition:</b> oggetti.h:95</div></div>
+<div class="ttc" id="structMeteora_html_ac5de06ee0df95b5fd74d392a9750fad6"><div class="ttname"><a href="structMeteora.html#ac5de06ee0df95b5fd74d392a9750fad6">Meteora::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> oggetti.h:99</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a880cc78703c57ee6bca816d3eeb284ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disegnaPlayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a>&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structPlayer.html">Player</a></td><td>Disegna la bitmap assegnata all'instanza di <a class="el" href="structPlayer.html">Player</a>. 0.1 e 0.1 sono gli indici di scala (rispetto gli assi x e y). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  al_draw_scaled_rotated_bitmap(ship.<a class="code" href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">sprite</a>, 640/2, 480/2, ship.<a class="code" href="structPlayer.html#a5d5b38d7fb6ef85d927acd110dc533b1">posX</a>, ship.<a class="code" href="structPlayer.html#a05c928cd298cc19c5f37b15dac679a06">posY</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    0.1, 0.1, ship.<a class="code" href="structPlayer.html#ab9479a6a358ae91c1e893e4ad968fc2f">angolo</a> * 3.14159 /180,0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="structPlayer_html_ab9479a6a358ae91c1e893e4ad968fc2f"><div class="ttname"><a href="structPlayer.html#ab9479a6a358ae91c1e893e4ad968fc2f">Player::angolo</a></div><div class="ttdeci">double angolo</div><div class="ttdef"><b>Definition:</b> oggetti.h:60</div></div>
+<div class="ttc" id="structPlayer_html_a5d5b38d7fb6ef85d927acd110dc533b1"><div class="ttname"><a href="structPlayer.html#a5d5b38d7fb6ef85d927acd110dc533b1">Player::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> oggetti.h:58</div></div>
+<div class="ttc" id="structPlayer_html_a05c928cd298cc19c5f37b15dac679a06"><div class="ttname"><a href="structPlayer.html#a05c928cd298cc19c5f37b15dac679a06">Player::posY</a></div><div class="ttdeci">int posY</div><div class="ttdef"><b>Definition:</b> oggetti.h:59</div></div>
+<div class="ttc" id="structPlayer_html_ae5ec51f530a2cf1dff6619fbbb75e4ed"><div class="ttname"><a href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">Player::sprite</a></div><div class="ttdeci">ALLEGRO_BITMAP * sprite</div><div class="ttdef"><b>Definition:</b> oggetti.h:53</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3170bab04b6170e9e45c2fd6af52d00f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void playerStat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a>&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>cuore</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>textFont</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rappresenta a schermo le statistiche di gioco (vite rimaste, punteggio). </p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  al_draw_textf(textFont, al_map_rgb(255,255,255),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a> - 10, 10, ALLEGRO_ALIGN_RIGHT,<span class="stringliteral">&quot;PUNTI: %i&quot;</span>,ship.<a class="code" href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">punteggio</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">if</span>(ship.<a class="code" href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">vita</a> &gt; 0)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=ship.<a class="code" href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">vita</a>; i++)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      al_draw_scaled_bitmap(cuore, 0,0, 800, 800, i*40, 10, 30, 30, 0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="structPlayer_html_afa168eae9f28215870bfa01ba6c3b343"><div class="ttname"><a href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">Player::vita</a></div><div class="ttdeci">int vita</div><div class="ttdef"><b>Definition:</b> oggetti.h:55</div></div>
+<div class="ttc" id="structPlayer_html_aaaf57b0dae03669c326bb14cd7b3839e"><div class="ttname"><a href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">Player::punteggio</a></div><div class="ttdeci">int punteggio</div><div class="ttdef"><b>Definition:</b> oggetti.h:56</div></div>
+<div class="ttc" id="videoRender_8cc_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> videoRender.cc:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aad142aabd13df1d53dbbbfccdb3d000d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void schermataGameover </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>sfondoGameover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>gameoverFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>punteggioFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>punteggio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Visualizza la schermata di fine gioco (testo "gameover", punteggio finale ottenuto, comandi possibili. </p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                                                                                                                                        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; al_draw_scaled_bitmap(sfondoGameover, 0, 0, al_get_bitmap_width(sfondoGameover),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  al_get_bitmap_height(sfondoGameover),0,0,<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>,<a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>,0);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  al_draw_textf(gameoverFont, al_map_rgb(255,255,0),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2 , 70,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;GAME OVER&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  al_draw_textf(punteggioFont, al_map_rgb(255,255,255),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2 , <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>/2 + 90,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;PUNTEGGIO: %i&quot;</span>,punteggio);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2 , <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a> - 80,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;SPAZIO: Torna al menù&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2 , <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a> - 60,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;ESC: Esci dal gioco&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="videoRender_8cc_html_aed89bd71aee8be823e8a20ec4e093c1e"><div class="ttname"><a href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a></div><div class="ttdeci">#define HEIGHT</div><div class="ttdef"><b>Definition:</b> videoRender.cc:15</div></div>
+<div class="ttc" id="videoRender_8cc_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> videoRender.cc:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a37c3b6abcdf4c32a6e45b262a16cc157"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void schermataMenu </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>sfondoMenu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>menuFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>font</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Visualizza la schermata iniziale (titolo del gioco e comandi possibili. </p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                                                         {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  al_draw_scaled_bitmap(sfondoMenu, 0, 0, al_get_bitmap_width(sfondoMenu),al_get_bitmap_height(sfondoMenu),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    0,0,<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>,<a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>,0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  al_draw_textf(menuFont, al_map_rgb(255,255,0), <a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2, 100, ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;SPACE EFFECT&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255), 10, <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>-60, ALLEGRO_ALIGN_LEFT,<span class="stringliteral">&quot;SPAZIO: Nuova Partita&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255), 10, <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>-30, ALLEGRO_ALIGN_LEFT,<span class="stringliteral">&quot;ESC: Esci dal gioco&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="videoRender_8cc_html_aed89bd71aee8be823e8a20ec4e093c1e"><div class="ttname"><a href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a></div><div class="ttdeci">#define HEIGHT</div><div class="ttdef"><b>Definition:</b> videoRender.cc:15</div></div>
+<div class="ttc" id="videoRender_8cc_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> videoRender.cc:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7db08f1e1a7c21f681944418ff37729a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void schermataPausa </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>gameoverFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>font</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Visualizza la schemata di pausa dal gioco (testo "pausa" e comandi possibili). </p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  al_draw_textf(gameoverFont, al_map_rgb(255,255,255),<a class="code" href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>/2 , <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>/2 - 50,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ALLEGRO_ALIGN_CENTRE,<span class="stringliteral">&quot;PAUSA&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255), 10, <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>-60,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ALLEGRO_ALIGN_LEFT,<span class="stringliteral">&quot;SPAZIO: Abbandona partita&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  al_draw_textf(font, al_map_rgb(255,255,255), 10, <a class="code" href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>-30,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ALLEGRO_ALIGN_LEFT,<span class="stringliteral">&quot;ESC: Riprendi partita&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="ttc" id="videoRender_8cc_html_aed89bd71aee8be823e8a20ec4e093c1e"><div class="ttname"><a href="videoRender_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a></div><div class="ttdeci">#define HEIGHT</div><div class="ttdef"><b>Definition:</b> videoRender.cc:15</div></div>
+<div class="ttc" id="videoRender_8cc_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="videoRender_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> videoRender.cc:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

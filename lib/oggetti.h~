@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+/** Inizio interfaccia */
+
+// Sezione per il debug
+
+/** Valore di MASK
+* 1: debug-livello1
+* 2: debug-livello2
+*	3: debug-livello1 + debug-livello2
+*/
+#define MASK 1
+
+/** Se l'espressione risulta true, viene scritta la riga di codice 
+* del tipo D<A>(<istruzioni>); altrimenti viene cancellata.
+*/
+#define DBG(A,B) {if ((A) & MASK) {B; } }
+
+/** Debug-livello1: stampa su cout degli attributi delle meteore generate. */
+#define D1(a) DBG(1,a)
+
+/** Debug-livello2: stampa su cout di ogni cambiamento di stato */
+#define D2(a) DBG(2,a)
+
+// Fine sezione per il debug
+
+
+
+
+//Strutture dati
+
+/**Enumerazione che semplifica la verifica del
+* tipo delle istanze di Meteora.
+*/
+enum Tipo{PICCOLA,MEDIA,GRANDE};
+
+struct Player {
+
+  ALLEGRO_BITMAP *sprite;
+
+  int vita;
+  int punteggio;
+
+  int posX;
+  int posY;
+  double angolo;
+
+  int vel;
+};
+
+
+struct Colpo {
+
+  bool attivo;
+
+  int posX;
+  int posY;
+
+  double degrees;
+  int vel;
+};
+
+
+struct Meteora {
+
+  ALLEGRO_BITMAP *sprite;
+
+  Tipo tipo;
+  bool inVita;
+
+  int raggio;
+  int bordo;
+  double scala;
+
+  int posX;
+  int posY;
+
+  int vel;
+  double degrees;
+  double dirX;
+};
+//Fine strutture dati
+
+/** Fine interfaccia */

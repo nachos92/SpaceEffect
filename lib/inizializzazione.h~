@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+
+/** Inizio interfaccia */
+void initPlayer(Player &ship);
+void initColpi(Colpo colpi[],int nmax);
+void initMeteore(Meteora meteora[], int nmax);
+void generaMeteora(Meteora meteora[], int nmax, ALLEGRO_BITMAP *icone[]);
+
+/** Fine interfaccia */
+
+
+/** Inizio implementazione */
+void genRandomVal(int &vel, int &x, int &y, int &angolo, int &tipo);
+void assegnaTipo(Meteora &meteora, int randomTipo, ALLEGRO_BITMAP *icone[]);
+void assegnaPos_e_moto(Meteora &meteora, int randomX, int randomY, int randomVel, int randomAng);
+
+/** Fine implementazione */

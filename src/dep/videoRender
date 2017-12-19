@@ -1,0 +1,1 @@
+videoRender.o: videoRender.cc ../lib/oggetti.h ../lib/render.h

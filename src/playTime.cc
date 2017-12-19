@@ -1,0 +1,217 @@
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
+#include <cmath>
+#include <cassert>
+#include "oggetti.h"
+#include "gioco.h"
+#include <iostream>
+using namespace std;
+
+#define WIDTH 800
+#define HEIGHT 640
+#define FPS 30
+
+#define MAXCOLPI 5
+#define MAXMETEORE 7
+
+
+
+/** Ogni chiamata, decrementa l'attributo "angolo" di ship,
+* controllando inoltre che l'angolo non vada sotto 0.
+*/
+void ruotaAntiorario(Player& ship, const int gradi) {
+
+  if(ship.angolo<= 0)
+    ship.angolo = 360;
+  else
+    ship.angolo -= gradi;
+
+}
+
+/**Ogni chiamata, incrementa l'attributo "angolo" di ship,
+* controllando inoltre che l'angolo non vada oltre i 360.
+*/
+void ruotaOrario(Player& ship, const int gradi) {
+
+  if(ship.angolo >= 360)
+    ship.angolo = 0;
+  else
+    ship.angolo += gradi;
+
+  }
+
+
+
+
+/**Sposta il giocatore lungo la direzione dell'oggetto.
+  Viene aggiornata la posizione di "ship" lungo x e y; se si è al di fuori
+  del range 0-WIDTH/0-HEIGHT, si riassegnano i valori in modo da essere dalla "parte opposta".
+*/
+void muovi(Player &ship) {
+
+  if(ship.posY < 0)
+    ship.posY = HEIGHT;
+  else if(ship.posY > HEIGHT)
+    ship.posY = 0;
+
+
+  if(ship.posX > WIDTH)
+    ship.posX = 0;
+  else if (ship.posX < 0)
+    ship.posX = WIDTH;
+
+  /** Formule che permettono lo spostamento continuo
+  * a seconda del grado di rotazione.
+  */
+  ship.posX += ship.vel * sin(ship.angolo* 3.14159 /180);
+  ship.posY -= ship.vel *  cos(ship.angolo* 3.14159 /180);
+
+
+}
+
+/** Se l'i-esimo elemento Colpo non è attivo (cioè se non è già sullo schermo)
+* viene reso attivo, assegnandogli posizione e angolazione che ha l'istanza di Player
+* quando viene chiamata questa funzione.
+*/
+void sparaColpo(Colpo colpi[], int nmax, Player ship, ALLEGRO_SAMPLE *shot) {
+
+  for(int i=0; i<nmax; i++) {
+
+    if(colpi[i].attivo == false) {
+
+      D2(cout<<"Sparato colpo "<<i+1<<endl;)
+      colpi[i].posX = ship.posX;
+      colpi[i].posY = ship.posY;
+      colpi[i].degrees = ship.angolo;
+      colpi[i].attivo = true;
+      al_play_sample(shot,1,0,1,ALLEGRO_PLAYMODE_ONCE,0);
+      break;
+    }
+  }
+}
+
+/** Aggiorna la posizione lungo x e y di ogni colpo attivo, disattivandolo
+*  quando esce dai limiti dello schermo (funzione fuoriSchermo).
+*/
+void aggiornaColpo(Colpo colpi[],int nmax){
+
+  for(int i=0; i<nmax; i++) {
+
+    if(colpi[i].attivo == true) {
+
+      colpi[i].posX += colpi[i].vel * sin(colpi[i].degrees * 3.14159 /180);
+      colpi[i].posY -= colpi[i].vel *  cos(colpi[i].degrees * 3.14159 /180);
+
+      if(fuoriSchermo(colpi[i].posX,colpi[i].posY)) {
+        colpi[i].attivo = false;
+        D2(cout<<"Colpo "<<i+1<<" fuori schermo"<<endl;)
+        }
+    }
+  }
+}
+
+/** Ritorna vero se il punto di coordinate (x,y)
+* si trova al di fuori di un certo margine (30 pixels)
+* al di fuori della finestra.
+*/
+bool fuoriSchermo(const int x, const int y) {
+
+  if(x < -30 || x > WIDTH + 30 || y < -30
+    || y > WIDTH +30)
+    return true;
+
+  return false;
+
+}
+
+
+/** Aggiorna la posizione lungo x e y di ogni meteora "in vita".
+* Se la posizione degli oggetti Meteora è "oltre" un margine al di fuori dei limiti della finestra,
+* si rende l'oggetto "non in vita".
+*/
+void aggiornaMeteore(Meteora meteora[],int nmax) {
+
+  for(int i=0; i<nmax; i++) {
+
+    if(meteora[i].inVita == true) {
+
+      meteora[i].posX += meteora[i].vel * sin(meteora[i].degrees* 3.14159 /180);
+      meteora[i].posY -= meteora[i].vel *  cos(meteora[i].degrees * 3.14159 /180);
+
+      if(fuoriSchermo(meteora[i].posX,meteora[i].posY)) {
+        meteora[i].inVita = false;
+        D2(cout<<"Meteora "<<i+1<<" fuori schermo."<<endl;)
+      }
+    }
+  } // FINE CICLO FOR
+}
+
+/**Aggiorna il punteggio e rende "non in vita" la meteora in caso di bersaglio centrato,
+* verificando la posizione dell'i-esimo colpo rispetto all'hit-box della j-esima meteora.
+*/
+void collisioneColpo(Colpo colpi[], const int maxcolpi, Meteora meteora[], const int maxmeteore, Player &ship, ALLEGRO_SAMPLE *explosion) {
+
+  for(int i=0; i<maxcolpi; i++) {
+
+    if(colpi[i].attivo == true) {
+
+      for(int j=0; j<maxmeteore; j++) {
+
+        if(meteora[j].inVita == true) {
+
+          if(colpi[i].posX > meteora[j].posX - meteora[j].bordo*(0.5+meteora[j].scala) &&
+            colpi[i].posX < meteora[j].posX + meteora[j].bordo*(0.5+meteora[j].scala) &&
+            colpi[i].posY > meteora[j].posY - meteora[j].bordo*(0.5+meteora[j].scala) &&
+            colpi[i].posY < meteora[j].posY + meteora[j].bordo*(0.5+meteora[j].scala)) {
+
+            al_play_sample(explosion,1,0,1,ALLEGRO_PLAYMODE_ONCE,0);
+
+            colpi[i].attivo = false;
+
+            meteora[j].inVita = false;
+
+            switch (meteora[j].tipo) {
+              case PICCOLA:
+                ship.punteggio += 3;
+                break;
+              case MEDIA:
+                ship.punteggio += 5;
+                break;
+              case GRANDE:
+                ship.punteggio += 10;
+                break;
+
+            } // FINE SWITCH
+          }
+        } // FINE "meteora.inVita"
+      } // FINE CICLO FOR interno
+    }
+  } // FINE CICLO FOR esterno
+}
+
+/**Sottrae una vita all'istanza di Player ed elimina la meteora in caso di collisione.
+* I valori 32 e 24 sono usati per migliorare l'accuratezza della hit box di "ship".
+*/
+void collisioneMeteora(Meteora meteora[], int nmax, Player &ship, ALLEGRO_SAMPLE  *crash) {
+
+  for(int i=0; i<nmax; i++) {
+
+    if(meteora[i].inVita == true) {
+
+      if(meteora[i].posX + meteora[i].bordo > ship.posX - 32 &&
+          meteora[i].posX - meteora[i].bordo < ship.posX + 32 &&
+          meteora[i].posY + meteora[i].bordo > ship.posY - 24 &&
+          meteora[i].posY - meteora[i].bordo < ship.posY + 24) {
+
+        al_play_sample(crash,1.5,0,1,ALLEGRO_PLAYMODE_ONCE,0);
+        meteora[i].inVita = false;
+        ship.vita--;
+      }
+    }
+  } // FINE CICLO FOR
+}

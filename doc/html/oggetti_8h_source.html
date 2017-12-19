@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS:  File sorgente lib/oggetti.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">oggetti.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="oggetti_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Sezione per il debug</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="oggetti_8h.html#ae7520c5477c11965aabeedc033c9862b">   13</a></span>&#160;<span class="preprocessor">#define MASK 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="oggetti_8h.html#a9fd176efd6d22cb809550f0271c2a93d">   18</a></span>&#160;<span class="preprocessor">#define DBG(A,B) {if ((A) &amp; MASK) {B; } }</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="oggetti_8h.html#a330bea9b36f638349fec0d06c8ab4c38">   21</a></span>&#160;<span class="preprocessor">#define D1(a) DBG(1,a)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="oggetti_8h.html#a975397c373ae2a9dc28d0297fa18da56">   24</a></span>&#160;<span class="preprocessor">#define D2(a) DBG(2,a)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Fine sezione per il debug</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="oggetti_8h.html#a241aeeb764887ae5e3de58b98f04b16d">   29</a></span>&#160;<span class="preprocessor">#define WIDTH 800</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="oggetti_8h.html#aed89bd71aee8be823e8a20ec4e093c1e">   30</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define HEIGHT 640</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//Strutture dati</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">   38</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a>{<a class="code" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa5fc999915f1058825c719256216c6bef">PICCOLA</a>,<a class="code" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa3eb0b3c78d811b28fdb69a414c0881b8">MEDIA</a>,<a class="code" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa0fc18ac4de5a16d903738de9236819d9">GRANDE</a>};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structPlayer.html">   51</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPlayer.html">Player</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">   53</a></span>&#160;  ALLEGRO_BITMAP *<a class="code" href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">sprite</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">   55</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">vita</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">   56</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">punteggio</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structPlayer.html#a5d5b38d7fb6ef85d927acd110dc533b1">   58</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structPlayer.html#a5d5b38d7fb6ef85d927acd110dc533b1">posX</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structPlayer.html#a05c928cd298cc19c5f37b15dac679a06">   59</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structPlayer.html#a05c928cd298cc19c5f37b15dac679a06">posY</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structPlayer.html#ab9479a6a358ae91c1e893e4ad968fc2f">   60</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structPlayer.html#ab9479a6a358ae91c1e893e4ad968fc2f">angolo</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structPlayer.html#a92d94212572216fbf994ddf36eb02de8">   62</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structPlayer.html#a92d94212572216fbf994ddf36eb02de8">vel</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structColpo.html">   66</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structColpo.html">Colpo</a> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structColpo.html#a7c8bc74473a900585e6cdf6b6970e2e1">   68</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structColpo.html#a7c8bc74473a900585e6cdf6b6970e2e1">attivo</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structColpo.html#a3f683ccf0fe6a7b324bdbd0d24468798">   70</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structColpo.html#a3f683ccf0fe6a7b324bdbd0d24468798">posX</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structColpo.html#a4b318a5cb171436188973deb33b5901c">   71</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structColpo.html#a4b318a5cb171436188973deb33b5901c">posY</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structColpo.html#a814ed144c70ede07b650dd58b912230d">   73</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structColpo.html#a814ed144c70ede07b650dd58b912230d">degrees</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structColpo.html#a37933511daa915dd8695b00f95c4d16a">   74</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structColpo.html#a37933511daa915dd8695b00f95c4d16a">vel</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structMeteora.html">   88</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMeteora.html">Meteora</a> {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structMeteora.html#a9b2595925ee39d5fbcdb1263046f749a">   90</a></span>&#160;  ALLEGRO_BITMAP *<a class="code" href="structMeteora.html#a9b2595925ee39d5fbcdb1263046f749a">sprite</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structMeteora.html#acc2edb79735f2d673fc34a94574dad92">   92</a></span>&#160;  <a class="code" href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a> <a class="code" href="structMeteora.html#acc2edb79735f2d673fc34a94574dad92">tipo</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structMeteora.html#af4a3fa28c00819e6715793c544c37828">   93</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structMeteora.html#af4a3fa28c00819e6715793c544c37828">inVita</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structMeteora.html#aeaddd20632e588d8d6f04447c1d446ce">   95</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMeteora.html#aeaddd20632e588d8d6f04447c1d446ce">raggio</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structMeteora.html#a61d7b43c265dc58f2c4a6ac1878b27f8">   96</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMeteora.html#a61d7b43c265dc58f2c4a6ac1878b27f8">bordo</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structMeteora.html#ac839d9fe014f4588ad3fd6ca2e67d204">   97</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structMeteora.html#ac839d9fe014f4588ad3fd6ca2e67d204">scala</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structMeteora.html#ac5de06ee0df95b5fd74d392a9750fad6">   99</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMeteora.html#ac5de06ee0df95b5fd74d392a9750fad6">posX</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="structMeteora.html#a7335b6c20512da0916129af958cde5cb">  100</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMeteora.html#a7335b6c20512da0916129af958cde5cb">posY</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="structMeteora.html#a43522264214b4b928df626088b6cfcf8">  102</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMeteora.html#a43522264214b4b928df626088b6cfcf8">vel</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structMeteora.html#ab08521823721e89fe942a3e5fe7738b3">  103</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structMeteora.html#ab08521823721e89fe942a3e5fe7738b3">degrees</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structMeteora.html#a4016c3b7af0096728c495306ce1d0275">  104</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structMeteora.html#a4016c3b7af0096728c495306ce1d0275">dirX</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//Fine strutture dati</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="ttc" id="structColpo_html_a7c8bc74473a900585e6cdf6b6970e2e1"><div class="ttname"><a href="structColpo.html#a7c8bc74473a900585e6cdf6b6970e2e1">Colpo::attivo</a></div><div class="ttdeci">bool attivo</div><div class="ttdef"><b>Definition:</b> oggetti.h:68</div></div>
+<div class="ttc" id="structColpo_html_a3f683ccf0fe6a7b324bdbd0d24468798"><div class="ttname"><a href="structColpo.html#a3f683ccf0fe6a7b324bdbd0d24468798">Colpo::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> oggetti.h:70</div></div>
+<div class="ttc" id="structMeteora_html_ac839d9fe014f4588ad3fd6ca2e67d204"><div class="ttname"><a href="structMeteora.html#ac839d9fe014f4588ad3fd6ca2e67d204">Meteora::scala</a></div><div class="ttdeci">double scala</div><div class="ttdef"><b>Definition:</b> oggetti.h:97</div></div>
+<div class="ttc" id="structMeteora_html_a9b2595925ee39d5fbcdb1263046f749a"><div class="ttname"><a href="structMeteora.html#a9b2595925ee39d5fbcdb1263046f749a">Meteora::sprite</a></div><div class="ttdeci">ALLEGRO_BITMAP * sprite</div><div class="ttdef"><b>Definition:</b> oggetti.h:90</div></div>
+<div class="ttc" id="oggetti_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155aa0fc18ac4de5a16d903738de9236819d9"><div class="ttname"><a href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa0fc18ac4de5a16d903738de9236819d9">GRANDE</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:38</div></div>
+<div class="ttc" id="structPlayer_html_ab9479a6a358ae91c1e893e4ad968fc2f"><div class="ttname"><a href="structPlayer.html#ab9479a6a358ae91c1e893e4ad968fc2f">Player::angolo</a></div><div class="ttdeci">double angolo</div><div class="ttdef"><b>Definition:</b> oggetti.h:60</div></div>
+<div class="ttc" id="structPlayer_html_a5d5b38d7fb6ef85d927acd110dc533b1"><div class="ttname"><a href="structPlayer.html#a5d5b38d7fb6ef85d927acd110dc533b1">Player::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> oggetti.h:58</div></div>
+<div class="ttc" id="oggetti_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155a"><div class="ttname"><a href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a></div><div class="ttdeci">Tipo</div><div class="ttdef"><b>Definition:</b> oggetti.h:38</div></div>
+<div class="ttc" id="structMeteora_html_a61d7b43c265dc58f2c4a6ac1878b27f8"><div class="ttname"><a href="structMeteora.html#a61d7b43c265dc58f2c4a6ac1878b27f8">Meteora::bordo</a></div><div class="ttdeci">int bordo</div><div class="ttdef"><b>Definition:</b> oggetti.h:96</div></div>
+<div class="ttc" id="oggetti_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155aa3eb0b3c78d811b28fdb69a414c0881b8"><div class="ttname"><a href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa3eb0b3c78d811b28fdb69a414c0881b8">MEDIA</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:38</div></div>
+<div class="ttc" id="structColpo_html_a814ed144c70ede07b650dd58b912230d"><div class="ttname"><a href="structColpo.html#a814ed144c70ede07b650dd58b912230d">Colpo::degrees</a></div><div class="ttdeci">double degrees</div><div class="ttdef"><b>Definition:</b> oggetti.h:73</div></div>
+<div class="ttc" id="structMeteora_html"><div class="ttname"><a href="structMeteora.html">Meteora</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:88</div></div>
+<div class="ttc" id="structPlayer_html_afa168eae9f28215870bfa01ba6c3b343"><div class="ttname"><a href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">Player::vita</a></div><div class="ttdeci">int vita</div><div class="ttdef"><b>Definition:</b> oggetti.h:55</div></div>
+<div class="ttc" id="structPlayer_html"><div class="ttname"><a href="structPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:51</div></div>
+<div class="ttc" id="structPlayer_html_a92d94212572216fbf994ddf36eb02de8"><div class="ttname"><a href="structPlayer.html#a92d94212572216fbf994ddf36eb02de8">Player::vel</a></div><div class="ttdeci">int vel</div><div class="ttdef"><b>Definition:</b> oggetti.h:62</div></div>
+<div class="ttc" id="structPlayer_html_a05c928cd298cc19c5f37b15dac679a06"><div class="ttname"><a href="structPlayer.html#a05c928cd298cc19c5f37b15dac679a06">Player::posY</a></div><div class="ttdeci">int posY</div><div class="ttdef"><b>Definition:</b> oggetti.h:59</div></div>
+<div class="ttc" id="structPlayer_html_aaaf57b0dae03669c326bb14cd7b3839e"><div class="ttname"><a href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">Player::punteggio</a></div><div class="ttdeci">int punteggio</div><div class="ttdef"><b>Definition:</b> oggetti.h:56</div></div>
+<div class="ttc" id="structMeteora_html_a4016c3b7af0096728c495306ce1d0275"><div class="ttname"><a href="structMeteora.html#a4016c3b7af0096728c495306ce1d0275">Meteora::dirX</a></div><div class="ttdeci">double dirX</div><div class="ttdef"><b>Definition:</b> oggetti.h:104</div></div>
+<div class="ttc" id="structMeteora_html_a7335b6c20512da0916129af958cde5cb"><div class="ttname"><a href="structMeteora.html#a7335b6c20512da0916129af958cde5cb">Meteora::posY</a></div><div class="ttdeci">int posY</div><div class="ttdef"><b>Definition:</b> oggetti.h:100</div></div>
+<div class="ttc" id="structColpo_html_a37933511daa915dd8695b00f95c4d16a"><div class="ttname"><a href="structColpo.html#a37933511daa915dd8695b00f95c4d16a">Colpo::vel</a></div><div class="ttdeci">int vel</div><div class="ttdef"><b>Definition:</b> oggetti.h:74</div></div>
+<div class="ttc" id="structColpo_html"><div class="ttname"><a href="structColpo.html">Colpo</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:66</div></div>
+<div class="ttc" id="structColpo_html_a4b318a5cb171436188973deb33b5901c"><div class="ttname"><a href="structColpo.html#a4b318a5cb171436188973deb33b5901c">Colpo::posY</a></div><div class="ttdeci">int posY</div><div class="ttdef"><b>Definition:</b> oggetti.h:71</div></div>
+<div class="ttc" id="structMeteora_html_af4a3fa28c00819e6715793c544c37828"><div class="ttname"><a href="structMeteora.html#af4a3fa28c00819e6715793c544c37828">Meteora::inVita</a></div><div class="ttdeci">bool inVita</div><div class="ttdef"><b>Definition:</b> oggetti.h:93</div></div>
+<div class="ttc" id="structMeteora_html_a43522264214b4b928df626088b6cfcf8"><div class="ttname"><a href="structMeteora.html#a43522264214b4b928df626088b6cfcf8">Meteora::vel</a></div><div class="ttdeci">int vel</div><div class="ttdef"><b>Definition:</b> oggetti.h:102</div></div>
+<div class="ttc" id="structMeteora_html_ab08521823721e89fe942a3e5fe7738b3"><div class="ttname"><a href="structMeteora.html#ab08521823721e89fe942a3e5fe7738b3">Meteora::degrees</a></div><div class="ttdeci">double degrees</div><div class="ttdef"><b>Definition:</b> oggetti.h:103</div></div>
+<div class="ttc" id="structMeteora_html_aeaddd20632e588d8d6f04447c1d446ce"><div class="ttname"><a href="structMeteora.html#aeaddd20632e588d8d6f04447c1d446ce">Meteora::raggio</a></div><div class="ttdeci">int raggio</div><div class="ttdef"><b>Definition:</b> oggetti.h:95</div></div>
+<div class="ttc" id="oggetti_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155aa5fc999915f1058825c719256216c6bef"><div class="ttname"><a href="oggetti_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa5fc999915f1058825c719256216c6bef">PICCOLA</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:38</div></div>
+<div class="ttc" id="structMeteora_html_acc2edb79735f2d673fc34a94574dad92"><div class="ttname"><a href="structMeteora.html#acc2edb79735f2d673fc34a94574dad92">Meteora::tipo</a></div><div class="ttdeci">Tipo tipo</div><div class="ttdef"><b>Definition:</b> oggetti.h:92</div></div>
+<div class="ttc" id="structMeteora_html_ac5de06ee0df95b5fd74d392a9750fad6"><div class="ttname"><a href="structMeteora.html#ac5de06ee0df95b5fd74d392a9750fad6">Meteora::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> oggetti.h:99</div></div>
+<div class="ttc" id="structPlayer_html_ae5ec51f530a2cf1dff6619fbbb75e4ed"><div class="ttname"><a href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">Player::sprite</a></div><div class="ttdeci">ALLEGRO_BITMAP * sprite</div><div class="ttdef"><b>Definition:</b> oggetti.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

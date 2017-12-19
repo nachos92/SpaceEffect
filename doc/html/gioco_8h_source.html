@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS:  File sorgente lib/gioco.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">gioco.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gioco_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="gioco_8h.html#aef00f0586a263e1a3329341aaf8908be">fuoriSchermo</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a61efa5593435ebaea1963450d729256f">ruotaAntiorario</a>(<a class="code" href="structPlayer.html">Player</a> &amp;ship, <span class="keyword">const</span> <span class="keywordtype">int</span> gradi);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a6899b3ba3da1f73ca4e01d9a11f7179b">ruotaOrario</a>(<a class="code" href="structPlayer.html">Player</a> &amp;ship, <span class="keyword">const</span> <span class="keywordtype">int</span> gradi);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#addb901cd358b5e58ee7514fe3c40476e">muovi</a>(<a class="code" href="structPlayer.html">Player</a> &amp;ship);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a3588e7fc121b083dff0ea59d5f8ecf35">sparaColpo</a>(<a class="code" href="structColpo.html">Colpo</a> colpi[], <span class="keywordtype">int</span> nmax, <a class="code" href="structPlayer.html">Player</a> ship, ALLEGRO_SAMPLE *shot);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a4a323b38e935e900c9a2421d24b6f457">aggiornaMeteore</a>(<a class="code" href="structMeteora.html">Meteora</a> meteora[],<span class="keywordtype">int</span> nmax);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#aa6e9aa72d702842e3d47f66bb3a83943">aggiornaColpo</a>(<a class="code" href="structColpo.html">Colpo</a> colpi[],<span class="keywordtype">int</span> nmax);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a9aaed5b593002b4651564775c3503b47">collisioneColpo</a>(<a class="code" href="structColpo.html">Colpo</a> colpi[], <span class="keyword">const</span> <span class="keywordtype">int</span> maxcolpi, <a class="code" href="structMeteora.html">Meteora</a> meteora[], <span class="keyword">const</span> <span class="keywordtype">int</span> maxmeteore, <a class="code" href="structPlayer.html">Player</a> &amp;ship, ALLEGRO_SAMPLE *explosion);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gioco_8h.html#a040408eee4e653a34c4cf83a589daf13">collisioneMeteora</a>(<a class="code" href="structMeteora.html">Meteora</a> meteora[], <span class="keywordtype">int</span> nmax, <a class="code" href="structPlayer.html">Player</a> &amp;ship, ALLEGRO_SAMPLE  *crash);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="ttc" id="gioco_8h_html_a61efa5593435ebaea1963450d729256f"><div class="ttname"><a href="gioco_8h.html#a61efa5593435ebaea1963450d729256f">ruotaAntiorario</a></div><div class="ttdeci">void ruotaAntiorario(Player &amp;ship, const int gradi)</div><div class="ttdef"><b>Definition:</b> playTime.cc:27</div></div>
+<div class="ttc" id="structMeteora_html"><div class="ttname"><a href="structMeteora.html">Meteora</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:88</div></div>
+<div class="ttc" id="structPlayer_html"><div class="ttname"><a href="structPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:51</div></div>
+<div class="ttc" id="gioco_8h_html_a9aaed5b593002b4651564775c3503b47"><div class="ttname"><a href="gioco_8h.html#a9aaed5b593002b4651564775c3503b47">collisioneColpo</a></div><div class="ttdeci">void collisioneColpo(Colpo colpi[], const int maxcolpi, Meteora meteora[], const int maxmeteore, Player &amp;ship, ALLEGRO_SAMPLE *explosion)</div><div class="ttdef"><b>Definition:</b> playTime.cc:157</div></div>
+<div class="ttc" id="gioco_8h_html_addb901cd358b5e58ee7514fe3c40476e"><div class="ttname"><a href="gioco_8h.html#addb901cd358b5e58ee7514fe3c40476e">muovi</a></div><div class="ttdeci">void muovi(Player &amp;ship)</div><div class="ttdef"><b>Definition:</b> playTime.cc:55</div></div>
+<div class="ttc" id="gioco_8h_html_a6899b3ba3da1f73ca4e01d9a11f7179b"><div class="ttname"><a href="gioco_8h.html#a6899b3ba3da1f73ca4e01d9a11f7179b">ruotaOrario</a></div><div class="ttdeci">void ruotaOrario(Player &amp;ship, const int gradi)</div><div class="ttdef"><b>Definition:</b> playTime.cc:39</div></div>
+<div class="ttc" id="gioco_8h_html_aa6e9aa72d702842e3d47f66bb3a83943"><div class="ttname"><a href="gioco_8h.html#aa6e9aa72d702842e3d47f66bb3a83943">aggiornaColpo</a></div><div class="ttdeci">void aggiornaColpo(Colpo colpi[], int nmax)</div><div class="ttdef"><b>Definition:</b> playTime.cc:101</div></div>
+<div class="ttc" id="structColpo_html"><div class="ttname"><a href="structColpo.html">Colpo</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:66</div></div>
+<div class="ttc" id="gioco_8h_html_a4a323b38e935e900c9a2421d24b6f457"><div class="ttname"><a href="gioco_8h.html#a4a323b38e935e900c9a2421d24b6f457">aggiornaMeteore</a></div><div class="ttdeci">void aggiornaMeteore(Meteora meteora[], int nmax)</div><div class="ttdef"><b>Definition:</b> playTime.cc:137</div></div>
+<div class="ttc" id="gioco_8h_html_aef00f0586a263e1a3329341aaf8908be"><div class="ttname"><a href="gioco_8h.html#aef00f0586a263e1a3329341aaf8908be">fuoriSchermo</a></div><div class="ttdeci">bool fuoriSchermo(const int x, const int y)</div><div class="ttdef"><b>Definition:</b> playTime.cc:122</div></div>
+<div class="ttc" id="gioco_8h_html_a040408eee4e653a34c4cf83a589daf13"><div class="ttname"><a href="gioco_8h.html#a040408eee4e653a34c4cf83a589daf13">collisioneMeteora</a></div><div class="ttdeci">void collisioneMeteora(Meteora meteora[], int nmax, Player &amp;ship, ALLEGRO_SAMPLE *crash)</div><div class="ttdef"><b>Definition:</b> playTime.cc:200</div></div>
+<div class="ttc" id="gioco_8h_html_a3588e7fc121b083dff0ea59d5f8ecf35"><div class="ttname"><a href="gioco_8h.html#a3588e7fc121b083dff0ea59d5f8ecf35">sparaColpo</a></div><div class="ttdeci">void sparaColpo(Colpo colpi[], int nmax, Player ship, ALLEGRO_SAMPLE *shot)</div><div class="ttdef"><b>Definition:</b> playTime.cc:81</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

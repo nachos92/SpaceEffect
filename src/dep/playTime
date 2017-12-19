@@ -1,0 +1,1 @@
+playTime.o: playTime.cc ../lib/oggetti.h ../lib/gioco.h

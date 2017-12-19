@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS: Riferimenti per il file src/main.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#enum-members">Tipi enumerati (enum)</a> &#124;
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle">
+<div class="title">Riferimenti per il file main.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;allegro5/allegro.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_primitives.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_image.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_font.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_ttf.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_audio.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_acodec.h&gt;</code><br/>
+<code>#include &lt;cmath&gt;</code><br/>
+<code>#include &lt;cassert&gt;</code><br/>
+<code>#include &quot;<a class="el" href="oggetti_8h_source.html">oggetti.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inizializzazione_8h_source.html">inizializzazione.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="gioco_8h_source.html">gioco.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="render_8h_source.html">render.h</a>&quot;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:a241aeeb764887ae5e3de58b98f04b16d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>&#160;&#160;&#160;800</td></tr>
+<tr class="separator:a241aeeb764887ae5e3de58b98f04b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>&#160;&#160;&#160;640</td></tr>
+<tr class="separator:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1d315f30fa4a3bd4f8212b59ea8739"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:aff1d315f30fa4a3bd4f8212b59ea8739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affdca280d12fe6f918436bebec337b3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:affdca280d12fe6f918436bebec337b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Tipi enumerati (enum)</h2></td></tr>
+<tr class="memitem:a917cb2ad6b731b390f8c57aa48656211"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a> { <br/>
+&#160;&#160;<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>, 
+<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>, 
+<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a>, 
+<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>, 
+<a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a>
+<br/>
+ }</td></tr>
+<tr class="separator:a917cb2ad6b731b390f8c57aa48656211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5cbc0ddfd109862abdfca29b95af6e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6e">STATI</a> { <a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>, 
+<a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>, 
+<a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>, 
+<a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>
+ }</td></tr>
+<tr class="separator:a8b5cbc0ddfd109862abdfca29b95af6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:aa2a7d6e0dcd8bcf9b846f3bf998e0de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a> (int &amp;stato, int nuovoStato)</td></tr>
+<tr class="separator:aa2a7d6e0dcd8bcf9b846f3bf998e0de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:ace610d4ae1cc4953b9ffb0b7bd55b1fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a> [] = {false,false,false,false,false}</td></tr>
+<tr class="separator:ace610d4ae1cc4953b9ffb0b7bd55b1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentazione delle definizioni</h2>
+<a class="anchor" id="ac92ca5ab87034a348decad7ee8d4bd1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FPS&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frames per second. Usato per settare il valore di tempo del timer. </p>
+
+</div>
+</div>
+<a class="anchor" id="aed89bd71aee8be823e8a20ec4e093c1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEIGHT&#160;&#160;&#160;640</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Altezza (in pixels) del display. </p>
+
+</div>
+</div>
+<a class="anchor" id="aff1d315f30fa4a3bd4f8212b59ea8739"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXCOLPI&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indica il numero max di colpi che possono essere sparati prima che almeno uno non scompaia. </p>
+
+</div>
+</div>
+<a class="anchor" id="affdca280d12fe6f918436bebec337b3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXMETEORE&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indica il numero max di meteore che possono essere "vive" prima che almeno una non scompaia. </p>
+
+</div>
+</div>
+<a class="anchor" id="a241aeeb764887ae5e3de58b98f04b16d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIDTH&#160;&#160;&#160;800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Larghezza (in pixels) del display </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione dei tipi enumerati</h2>
+<a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Facilita il controllo dello stato di un tasto non avendo assegnato ad ogni tasto una posizione "numerica" (nell'array keys[]). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valori del tipo enumerato</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa"></a>UP</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da"></a>DOWN</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065"></a>LEFT</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38"></a>RIGHT</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95"></a>SPACE</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d"></a>ESCAPE</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>,<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>,<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a>,<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>,<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>,<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a>};</div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8b5cbc0ddfd109862abdfca29b95af6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6e">STATI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Facilita il controllo dello stato attuale, invece di effettuare controlli su valori numerici. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valori del tipo enumerato</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721"></a>MENU</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b"></a>PLAY</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45"></a>PAUSA</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72"></a>GAMEOVER</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>};</div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle funzioni</h2>
+<a class="anchor" id="aa2a7d6e0dcd8bcf9b846f3bf998e0de9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cambiaStato </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>stato</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nuovoStato</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aggiorna la variabile che tiene traccia dello stato attuale, assegnandogli il nuovoStato (vedi <a class="el" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6e">STATI</a>). Se e' attivato il debug di 2° livello, vengono stampati su cout i cambiamenti di stato per le variazioni sia in entrata che in uscita. </p>
+<div class="fragment"><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                                             {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <a class="code" href="oggetti_8h.html#a975397c373ae2a9dc28d0297fa18da56">D2</a>(<span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>) {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Uscita da stato MENU&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>) {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Uscita da stato PLAY&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Uscita da stato PAUSA&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Uscita da stato GAMEOVER&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    })</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  stato = nuovoStato;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <a class="code" href="oggetti_8h.html#a975397c373ae2a9dc28d0297fa18da56">D2</a>(<span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>) {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Ingresso in stato MENU&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Ingresso in stato PLAY&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>) {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Ingresso in stato PAUSA&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>) {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Ingresso in stato GAMEOVER&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  })</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;}</div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="oggetti_8h_html_a975397c373ae2a9dc28d0297fa18da56"><div class="ttname"><a href="oggetti_8h.html#a975397c373ae2a9dc28d0297fa18da56">D2</a></div><div class="ttdeci">#define D2(a)</div><div class="ttdef"><b>Definition:</b> oggetti.h:24</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;           {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// Utilizzata per terminare l&#39;interfaccia grafica.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">bool</span> done = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// Usata per temporizzare il render a video.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> redraw = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// Il suo valore è rappresenta uno stato del gioco (STATI).</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">int</span> stato = -1;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// Variabile usata per la &quot;pausa&quot; e &quot;ripresa&quot; della traccia audio.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> posTracciaAudio;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">//Creazione delle istanze di Player, Colpo e Meteora.</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="structPlayer.html">Player</a> ship;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="structColpo.html">Colpo</a> colpi[<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="structMeteora.html">Meteora</a> meteora[<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="comment">//Creazione istanze delle variabili di ALLEGRO</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  ALLEGRO_DISPLAY *display = NULL;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  ALLEGRO_TIMER *timer = NULL;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  ALLEGRO_EVENT_QUEUE *event_queue;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  ALLEGRO_FONT *font = NULL;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  ALLEGRO_FONT *menuFont = NULL;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  ALLEGRO_FONT *gameoverFont = NULL;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  ALLEGRO_FONT *punteggioFont = NULL;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  ALLEGRO_BITMAP *sfondo = NULL;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  ALLEGRO_BITMAP *iconaMeteora = NULL;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  ALLEGRO_BITMAP *iconaMeteora1 = NULL;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  ALLEGRO_BITMAP *iconaMeteora2 = NULL;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  ALLEGRO_BITMAP *iconaMeteora3 = NULL;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  ALLEGRO_BITMAP *sfondoMenu = NULL;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  ALLEGRO_BITMAP *sfondoGameover = NULL;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  ALLEGRO_BITMAP *heart = NULL;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  ALLEGRO_SAMPLE *BGmusic = NULL;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  ALLEGRO_SAMPLE *shot = NULL;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  ALLEGRO_SAMPLE *explosion = NULL;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  ALLEGRO_SAMPLE *crash = NULL;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  ALLEGRO_SAMPLE_INSTANCE *BGmusic_instance = NULL;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">//Inizializzazione della libreria ALLEGRO</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  assert(al_init());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  display = al_create_display(<a class="code" href="main_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>,<a class="code" href="main_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  assert(display);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  al_set_window_position(display, 300,100);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">//Inizializzazione componenti e addon di allegro</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  al_init_primitives_addon();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  al_install_audio();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  al_init_image_addon();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  al_init_font_addon();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  al_init_ttf_addon();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  al_init_acodec_addon();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  al_install_keyboard();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  al_reserve_samples(<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>+3);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  srand(time(0));</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="creazione_8cc.html#ae1ada611b97b9e7b15c7277c2917cb66">initPlayer</a>(ship);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="creazione_8cc.html#adae4185f0b6ea193fa9f0fe2aa2414b5">initColpi</a>(colpi,<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="creazione_8cc.html#a726e6b5111034eae3ba270a9f1bdf49f">initMeteore</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="comment">//CARICAMENTO file immagine,audio e font.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  ship.<a class="code" href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">sprite</a> = al_load_bitmap(<span class="stringliteral">&quot;ship3.png&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  sfondo = al_load_bitmap(<span class="stringliteral">&quot;sfondo.jpg&quot;</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  sfondoMenu = al_load_bitmap(<span class="stringliteral">&quot;sfondoMenu.jpg&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  sfondoGameover = al_load_bitmap(<span class="stringliteral">&quot;sfondoGameover3.jpg&quot;</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  iconaMeteora1 = al_load_bitmap(<span class="stringliteral">&quot;ccomet1.png&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  iconaMeteora2 = al_load_bitmap(<span class="stringliteral">&quot;ccomet2.png&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  iconaMeteora3 = al_load_bitmap(<span class="stringliteral">&quot;ccomet3.png&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  heart = al_load_bitmap(<span class="stringliteral">&quot;heart.png&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  BGmusic = al_load_sample(<span class="stringliteral">&quot;SW_main.wav&quot;</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  shot = al_load_sample(<span class="stringliteral">&quot;lasershot.wav&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  explosion = al_load_sample(<span class="stringliteral">&quot;explosion.wav&quot;</span>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  crash = al_load_sample(<span class="stringliteral">&quot;crash.wav&quot;</span>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  font = al_load_font(<span class="stringliteral">&quot;me123.ttf&quot;</span>, 14,0);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  menuFont = al_load_font(<span class="stringliteral">&quot;swFont.ttf&quot;</span>, 82, 0);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  gameoverFont = al_load_font(<span class="stringliteral">&quot;me123.ttf&quot;</span>,64,0);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  punteggioFont = al_load_font(<span class="stringliteral">&quot;me123.ttf&quot;</span>, 32,0);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">//Fine caricamento file immagine,audio e font.</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  ALLEGRO_BITMAP *iconeMeteora[3] = {iconaMeteora1,iconaMeteora2,iconaMeteora3};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  BGmusic_instance = al_create_sample_instance(BGmusic);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  al_set_sample_instance_playmode(BGmusic_instance,ALLEGRO_PLAYMODE_LOOP);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  al_attach_sample_instance_to_mixer(BGmusic_instance,al_get_default_mixer());</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  event_queue = al_create_event_queue();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  timer = al_create_timer(1.0/<a class="code" href="main_8cc.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  al_register_event_source(event_queue,al_get_keyboard_event_source());</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  al_register_event_source(event_queue,al_get_timer_event_source(timer));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  al_register_event_source(event_queue,al_get_display_event_source(display));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  al_start_timer(timer);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">while</span>(!done) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    ALLEGRO_EVENT ev;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    al_wait_for_event(event_queue, &amp;ev);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      al_play_sample_instance(BGmusic_instance);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span>(ev.type == ALLEGRO_EVENT_KEY_DOWN) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">switch</span>(ev.keyboard.keycode) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_UP:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>]= <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_DOWN:</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_LEFT:</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_RIGHT:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_SPACE:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;          <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            al_stop_sample_instance(BGmusic_instance);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            sleep(1);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;          }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="playTime_8cc.html#a3588e7fc121b083dff0ea59d5f8ecf35">sparaColpo</a>(colpi,<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>,ship,shot);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            al_stop_sample_instance(BGmusic_instance);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            sleep(1);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_ESCAPE:</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;          <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="comment">//Implementa la messa in pausa della traccia audio specificata.</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            posTracciaAudio = al_get_sample_instance_position(BGmusic_instance);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            al_set_sample_instance_playing(BGmusic_instance,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="comment">//Implementa la ripresa della traccia audio dal punto in cui si era</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="comment">//sospesa la riproduzione.</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            al_set_sample_instance_position(BGmusic_instance,posTracciaAudio);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            al_set_sample_instance_playing(BGmusic_instance,<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            done = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            done = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ev.type == ALLEGRO_EVENT_KEY_UP) {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <span class="keywordflow">switch</span>(ev.keyboard.keycode) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_UP:</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>]= <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_DOWN:</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_LEFT:</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_RIGHT:</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_SPACE:</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">case</span> ALLEGRO_KEY_ESCAPE:</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;          <a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ev.type == ALLEGRO_EVENT_TIMER) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      redraw = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>])</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="playTime_8cc.html#addb901cd358b5e58ee7514fe3c40476e">muovi</a>(ship);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a>])</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="playTime_8cc.html#a61efa5593435ebaea1963450d729256f">ruotaAntiorario</a>(ship,10);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>])</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="playTime_8cc.html#a6899b3ba3da1f73ca4e01d9a11f7179b">ruotaOrario</a>(ship,10);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="comment">//Aggiornamento posizioni e verifica collisioni</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="playTime_8cc.html#aa6e9aa72d702842e3d47f66bb3a83943">aggiornaColpo</a>(colpi,<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="creazione_8cc.html#a77eb901f6141fe316035c81baca29163">generaMeteora</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>, iconeMeteora);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="playTime_8cc.html#a4a323b38e935e900c9a2421d24b6f457">aggiornaMeteore</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <a class="code" href="playTime_8cc.html#a9aaed5b593002b4651564775c3503b47">collisioneColpo</a>(colpi,<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>,meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>, ship, explosion);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="playTime_8cc.html#a040408eee4e653a34c4cf83a589daf13">collisioneMeteora</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>, ship, crash);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">if</span>(ship.<a class="code" href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">vita</a>&lt;=0) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;          al_stop_sample_instance(BGmusic_instance);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;          <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato,<a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a>[<a class="code" href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>]) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;          <a class="code" href="creazione_8cc.html#ae1ada611b97b9e7b15c7277c2917cb66">initPlayer</a>(ship);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;          <a class="code" href="creazione_8cc.html#a726e6b5111034eae3ba270a9f1bdf49f">initMeteore</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          <a class="code" href="creazione_8cc.html#adae4185f0b6ea193fa9f0fe2aa2414b5">initColpi</a>(colpi,<a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          <a class="code" href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a>(stato, <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    } <span class="comment">//FINE ALLEGRO_EVENT_TIMER</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      done = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// Sezione di RENDERING</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">if</span>(redraw &amp;&amp; al_is_event_queue_empty(event_queue)) {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      redraw = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a>)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="videoRender_8cc.html#a37c3b6abcdf4c32a6e45b262a16cc157">schermataMenu</a>(sfondoMenu,menuFont,font);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a>) {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        al_draw_scaled_bitmap(sfondo,0,0,1600,1000,0,0,<a class="code" href="main_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>,<a class="code" href="main_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>,0);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="videoRender_8cc.html#a880cc78703c57ee6bca816d3eeb284ed">disegnaPlayer</a>(ship);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="videoRender_8cc.html#aab259b7ee9f841c688528a0be8d0e40f">disegnaColpo</a>(colpi, <a class="code" href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a>);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="videoRender_8cc.html#a8b9e10983157ca0054df8e332ce1af23">disegnaMeteore</a>(meteora,<a class="code" href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a>,iconaMeteora);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <a class="code" href="videoRender_8cc.html#a3170bab04b6170e9e45c2fd6af52d00f">playerStat</a>(ship,heart,font);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a>)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="videoRender_8cc.html#a7db08f1e1a7c21f681944418ff37729a">schermataPausa</a>(gameoverFont,font);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(stato == <a class="code" href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a>)</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <a class="code" href="videoRender_8cc.html#aad142aabd13df1d53dbbbfccdb3d000d">schermataGameover</a>(sfondoGameover,gameoverFont,punteggioFont,font,ship.<a class="code" href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">punteggio</a>);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      al_flip_display();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      al_clear_to_color(al_map_rgb(0,0,0));</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    } <span class="comment">//Fine sezione di RENDERING</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  } <span class="comment">//FINE WHILE</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  <span class="comment">// Deallocazione delle variabili di Allegro create.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  al_destroy_display(display);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  al_destroy_bitmap(ship.<a class="code" href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">sprite</a>);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  al_destroy_bitmap(sfondo);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  al_destroy_bitmap(iconaMeteora1);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  al_destroy_bitmap(iconaMeteora2);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  al_destroy_bitmap(iconaMeteora3);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  al_destroy_sample(crash);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  al_destroy_sample(explosion);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  al_destroy_sample(shot);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  al_destroy_sample(BGmusic);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  al_destroy_sample_instance(BGmusic_instance);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  al_destroy_font(font);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  al_destroy_font(menuFont);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  al_destroy_font(gameoverFont);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  al_destroy_font(punteggioFont);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  al_destroy_timer(timer);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  al_destroy_event_queue(event_queue);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
+<div class="ttc" id="videoRender_8cc_html_a37c3b6abcdf4c32a6e45b262a16cc157"><div class="ttname"><a href="videoRender_8cc.html#a37c3b6abcdf4c32a6e45b262a16cc157">schermataMenu</a></div><div class="ttdeci">void schermataMenu(ALLEGRO_BITMAP *sfondoMenu, ALLEGRO_FONT *menuFont, ALLEGRO_FONT *font)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:47</div></div>
+<div class="ttc" id="main_8cc_html_aed89bd71aee8be823e8a20ec4e093c1e"><div class="ttname"><a href="main_8cc.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a></div><div class="ttdeci">#define HEIGHT</div><div class="ttdef"><b>Definition:</b> main.cc:49</div></div>
+<div class="ttc" id="videoRender_8cc_html_a7db08f1e1a7c21f681944418ff37729a"><div class="ttname"><a href="videoRender_8cc.html#a7db08f1e1a7c21f681944418ff37729a">schermataPausa</a></div><div class="ttdeci">void schermataPausa(ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *font)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:58</div></div>
+<div class="ttc" id="videoRender_8cc_html_a8b9e10983157ca0054df8e332ce1af23"><div class="ttname"><a href="videoRender_8cc.html#a8b9e10983157ca0054df8e332ce1af23">disegnaMeteore</a></div><div class="ttdeci">void disegnaMeteore(Meteora meteora[], int nmax, ALLEGRO_BITMAP *iconaMeteora)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:108</div></div>
+<div class="ttc" id="main_8cc_html_aff1d315f30fa4a3bd4f8212b59ea8739"><div class="ttname"><a href="main_8cc.html#aff1d315f30fa4a3bd4f8212b59ea8739">MAXCOLPI</a></div><div class="ttdeci">#define MAXCOLPI</div><div class="ttdef"><b>Definition:</b> main.cc:56</div></div>
+<div class="ttc" id="videoRender_8cc_html_a3170bab04b6170e9e45c2fd6af52d00f"><div class="ttname"><a href="videoRender_8cc.html#a3170bab04b6170e9e45c2fd6af52d00f">playerStat</a></div><div class="ttdeci">void playerStat(Player ship, ALLEGRO_BITMAP *cuore, ALLEGRO_FONT *textFont)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:36</div></div>
+<div class="ttc" id="playTime_8cc_html_a3588e7fc121b083dff0ea59d5f8ecf35"><div class="ttname"><a href="playTime_8cc.html#a3588e7fc121b083dff0ea59d5f8ecf35">sparaColpo</a></div><div class="ttdeci">void sparaColpo(Colpo colpi[], int nmax, Player ship, ALLEGRO_SAMPLE *shot)</div><div class="ttdef"><b>Definition:</b> playTime.cc:81</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea42495cc178524da331d4681864c72b72">GAMEOVER</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_affdca280d12fe6f918436bebec337b3e"><div class="ttname"><a href="main_8cc.html#affdca280d12fe6f918436bebec337b3e">MAXMETEORE</a></div><div class="ttdeci">#define MAXMETEORE</div><div class="ttdef"><b>Definition:</b> main.cc:60</div></div>
+<div class="ttc" id="main_8cc_html_ace610d4ae1cc4953b9ffb0b7bd55b1fd"><div class="ttname"><a href="main_8cc.html#ace610d4ae1cc4953b9ffb0b7bd55b1fd">keys</a></div><div class="ttdeci">bool keys[]</div><div class="ttdef"><b>Definition:</b> main.cc:72</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="structMeteora_html"><div class="ttname"><a href="structMeteora.html">Meteora</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:88</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aba595d8bca8bc5e67c37c0a9d89becfa">UP</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="structPlayer_html_afa168eae9f28215870bfa01ba6c3b343"><div class="ttname"><a href="structPlayer.html#afa168eae9f28215870bfa01ba6c3b343">Player::vita</a></div><div class="ttdeci">int vita</div><div class="ttdef"><b>Definition:</b> oggetti.h:55</div></div>
+<div class="ttc" id="creazione_8cc_html_a77eb901f6141fe316035c81baca29163"><div class="ttname"><a href="creazione_8cc.html#a77eb901f6141fe316035c81baca29163">generaMeteora</a></div><div class="ttdeci">void generaMeteora(Meteora meteora[], int nmax, ALLEGRO_BITMAP *icone[])</div><div class="ttdef"><b>Definition:</b> creazione.cc:136</div></div>
+<div class="ttc" id="structPlayer_html"><div class="ttname"><a href="structPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:51</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="playTime_8cc_html_addb901cd358b5e58ee7514fe3c40476e"><div class="ttname"><a href="playTime_8cc.html#addb901cd358b5e58ee7514fe3c40476e">muovi</a></div><div class="ttdeci">void muovi(Player &amp;ship)</div><div class="ttdef"><b>Definition:</b> playTime.cc:55</div></div>
+<div class="ttc" id="videoRender_8cc_html_aab259b7ee9f841c688528a0be8d0e40f"><div class="ttname"><a href="videoRender_8cc.html#aab259b7ee9f841c688528a0be8d0e40f">disegnaColpo</a></div><div class="ttdeci">void disegnaColpo(Colpo colpi[], int nmax)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:95</div></div>
+<div class="ttc" id="playTime_8cc_html_a61efa5593435ebaea1963450d729256f"><div class="ttname"><a href="playTime_8cc.html#a61efa5593435ebaea1963450d729256f">ruotaAntiorario</a></div><div class="ttdeci">void ruotaAntiorario(Player &amp;ship, const int gradi)</div><div class="ttdef"><b>Definition:</b> playTime.cc:27</div></div>
+<div class="ttc" id="main_8cc_html_a241aeeb764887ae5e3de58b98f04b16d"><div class="ttname"><a href="main_8cc.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a></div><div class="ttdeci">#define WIDTH</div><div class="ttdef"><b>Definition:</b> main.cc:46</div></div>
+<div class="ttc" id="structPlayer_html_aaaf57b0dae03669c326bb14cd7b3839e"><div class="ttname"><a href="structPlayer.html#aaaf57b0dae03669c326bb14cd7b3839e">Player::punteggio</a></div><div class="ttdeci">int punteggio</div><div class="ttdef"><b>Definition:</b> oggetti.h:56</div></div>
+<div class="ttc" id="creazione_8cc_html_adae4185f0b6ea193fa9f0fe2aa2414b5"><div class="ttname"><a href="creazione_8cc.html#adae4185f0b6ea193fa9f0fe2aa2414b5">initColpi</a></div><div class="ttdeci">void initColpi(Colpo colpi[], int nmax)</div><div class="ttdef"><b>Definition:</b> creazione.cc:36</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="structColpo_html"><div class="ttname"><a href="structColpo.html">Colpo</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:66</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211a0a311695a4f6c56869245418bebeb33d">ESCAPE</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="creazione_8cc_html_a726e6b5111034eae3ba270a9f1bdf49f"><div class="ttname"><a href="creazione_8cc.html#a726e6b5111034eae3ba270a9f1bdf49f">initMeteore</a></div><div class="ttdeci">void initMeteore(Meteora meteora[], int nmax)</div><div class="ttdef"><b>Definition:</b> creazione.cc:48</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="videoRender_8cc_html_aad142aabd13df1d53dbbbfccdb3d000d"><div class="ttname"><a href="videoRender_8cc.html#aad142aabd13df1d53dbbbfccdb3d000d">schermataGameover</a></div><div class="ttdeci">void schermataGameover(ALLEGRO_BITMAP *sfondoGameover, ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *punteggioFont, ALLEGRO_FONT *font, const int punteggio)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:72</div></div>
+<div class="ttc" id="playTime_8cc_html_a9aaed5b593002b4651564775c3503b47"><div class="ttname"><a href="playTime_8cc.html#a9aaed5b593002b4651564775c3503b47">collisioneColpo</a></div><div class="ttdeci">void collisioneColpo(Colpo colpi[], const int maxcolpi, Meteora meteora[], const int maxmeteore, Player &amp;ship, ALLEGRO_SAMPLE *explosion)</div><div class="ttdef"><b>Definition:</b> playTime.cc:157</div></div>
+<div class="ttc" id="playTime_8cc_html_a4a323b38e935e900c9a2421d24b6f457"><div class="ttname"><a href="playTime_8cc.html#a4a323b38e935e900c9a2421d24b6f457">aggiornaMeteore</a></div><div class="ttdeci">void aggiornaMeteore(Meteora meteora[], int nmax)</div><div class="ttdef"><b>Definition:</b> playTime.cc:137</div></div>
+<div class="ttc" id="main_8cc_html_a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45"><div class="ttname"><a href="main_8cc.html#a8b5cbc0ddfd109862abdfca29b95af6ea60fc5eaee370304305a60cc7ba79aa45">PAUSA</a></div><div class="ttdef"><b>Definition:</b> main.cc:76</div></div>
+<div class="ttc" id="main_8cc_html_ac92ca5ab87034a348decad7ee8d4bd1b"><div class="ttname"><a href="main_8cc.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a></div><div class="ttdeci">#define FPS</div><div class="ttdef"><b>Definition:</b> main.cc:52</div></div>
+<div class="ttc" id="creazione_8cc_html_ae1ada611b97b9e7b15c7277c2917cb66"><div class="ttname"><a href="creazione_8cc.html#ae1ada611b97b9e7b15c7277c2917cb66">initPlayer</a></div><div class="ttdeci">void initPlayer(Player &amp;ship)</div><div class="ttdef"><b>Definition:</b> creazione.cc:21</div></div>
+<div class="ttc" id="playTime_8cc_html_a6899b3ba3da1f73ca4e01d9a11f7179b"><div class="ttname"><a href="playTime_8cc.html#a6899b3ba3da1f73ca4e01d9a11f7179b">ruotaOrario</a></div><div class="ttdeci">void ruotaOrario(Player &amp;ship, const int gradi)</div><div class="ttdef"><b>Definition:</b> playTime.cc:39</div></div>
+<div class="ttc" id="playTime_8cc_html_a040408eee4e653a34c4cf83a589daf13"><div class="ttname"><a href="playTime_8cc.html#a040408eee4e653a34c4cf83a589daf13">collisioneMeteora</a></div><div class="ttdeci">void collisioneMeteora(Meteora meteora[], int nmax, Player &amp;ship, ALLEGRO_SAMPLE *crash)</div><div class="ttdef"><b>Definition:</b> playTime.cc:200</div></div>
+<div class="ttc" id="main_8cc_html_a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95"><div class="ttname"><a href="main_8cc.html#a917cb2ad6b731b390f8c57aa48656211ac08dae7edcb5c5bb959fee5971fbad95">SPACE</a></div><div class="ttdef"><b>Definition:</b> main.cc:68</div></div>
+<div class="ttc" id="main_8cc_html_aa2a7d6e0dcd8bcf9b846f3bf998e0de9"><div class="ttname"><a href="main_8cc.html#aa2a7d6e0dcd8bcf9b846f3bf998e0de9">cambiaStato</a></div><div class="ttdeci">void cambiaStato(int &amp;stato, int nuovoStato)</div><div class="ttdef"><b>Definition:</b> main.cc:398</div></div>
+<div class="ttc" id="playTime_8cc_html_aa6e9aa72d702842e3d47f66bb3a83943"><div class="ttname"><a href="playTime_8cc.html#aa6e9aa72d702842e3d47f66bb3a83943">aggiornaColpo</a></div><div class="ttdeci">void aggiornaColpo(Colpo colpi[], int nmax)</div><div class="ttdef"><b>Definition:</b> playTime.cc:101</div></div>
+<div class="ttc" id="structPlayer_html_ae5ec51f530a2cf1dff6619fbbb75e4ed"><div class="ttname"><a href="structPlayer.html#ae5ec51f530a2cf1dff6619fbbb75e4ed">Player::sprite</a></div><div class="ttdeci">ALLEGRO_BITMAP * sprite</div><div class="ttdef"><b>Definition:</b> oggetti.h:53</div></div>
+<div class="ttc" id="videoRender_8cc_html_a880cc78703c57ee6bca816d3eeb284ed"><div class="ttname"><a href="videoRender_8cc.html#a880cc78703c57ee6bca816d3eeb284ed">disegnaPlayer</a></div><div class="ttdeci">void disegnaPlayer(Player ship)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle variabili</h2>
+<a class="anchor" id="ace610d4ae1cc4953b9ffb0b7bd55b1fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool keys[] = {false,false,false,false,false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Se un tasto KEYS è premuto, il suo valore è true; diventa false al suo rilascio. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

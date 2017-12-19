@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS: Pagina Principale</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ASTEROIDS Documentazione</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Questa vuole essere una riproposizione semplificata dell'arcade game Asteroids, sfruttando la libreria grafica esterna Allegro 5 (<a href="http://www.allegro.cc">http://www.allegro.cc</a>).</p>
+<p><b>Il gioco</b>: ruotando la navicella e spostandola lungo la sua direzione, si schivano le meteore in arrivo e vi si spara contro cercando di distruggerne quante più possibili, ottenendo punteggi diversi a seconda del tipo di meteora. Il giocatore parte con 3 vite, che diminuiscono ogni volta che ci si schianta contro una meteora, fino ad arrivare a 0 vite, momento nel quale viene dichiarato Game Over. A ciò sono state aggiunte le schermate iniziali e finali (game over), nonchè la possibilità di mettere in pausa il gioco e la musica, visualizzando una opportuna schermata.</p>
+<p>Il programma è diviso in un modulo (<a class="el" href="creazione_8cc.html">creazione.cc</a> e <a class="el" href="inizializzazione_8h.html">inizializzazione.h</a>) che si occupa delle inizializzazioni delle entità di tipo <a class="el" href="structPlayer.html">Player</a>, <a class="el" href="structMeteora.html">Meteora</a> e <a class="el" href="structColpo.html">Colpo</a>, un modulo (<a class="el" href="playTime_8cc.html">playTime.cc</a> e <a class="el" href="gioco_8h.html">gioco.h</a>) che comprende funzioni per implementare il gioco in se', quindi la generazione in (istanti casuali) delle meteore, gli spostamenti di queste ultime, della navicella e dei colpi sparati, la verifica delle possibili collisioni e le variazioni di punteggio/vita. Infine vi è un ultimo modulo (<a class="el" href="videoRender_8cc.html">videoRender.cc</a> e <a class="el" href="render_8h.html">render.h</a>) che, come si deduce dai nomi dei file, si occupa della rappresentazione a video di tutti gli elementi del gioco e delle statistiche (vite rimanenti e punteggio), nonchè delle schermate iniziali, di pausa, e di gameover. </p>
+<p>La funzione <a class="el" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>, oltre a chiamare le funzioni necessarie dei vari moduli, implementa il meccanismo degli "stati di gioco", occupandosi dei cambi di stato di fronte ad opportuni input. Si occupa inoltre della inizializzazione/gestione/deallocazione degli elementi della libreria Allegro 5 (ALLEGRO_DISPLAY,ALLEGRO_EVENT_QUEUE,ALLEGRO_TIMER,ALLEGRO_BITMAP, ALLEGRO_SAMPLE, ALLEGRO_SAMPLE_INSTANCE,ALLEGRO_FONT). </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ASTEROIDS:  File sorgente lib/render.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASTEROIDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">render.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="render_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#a880cc78703c57ee6bca816d3eeb284ed">disegnaPlayer</a>(<a class="code" href="structPlayer.html">Player</a> ship);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#a8b9e10983157ca0054df8e332ce1af23">disegnaMeteore</a>(<a class="code" href="structMeteora.html">Meteora</a> meteora[],<span class="keywordtype">int</span> nmax, ALLEGRO_BITMAP *iconaMeteora);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#aab259b7ee9f841c688528a0be8d0e40f">disegnaColpo</a>(<a class="code" href="structColpo.html">Colpo</a> colpi[], <span class="keywordtype">int</span> nmax);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#a3170bab04b6170e9e45c2fd6af52d00f">playerStat</a>(<a class="code" href="structPlayer.html">Player</a> ship, ALLEGRO_BITMAP *cuore, ALLEGRO_FONT *textFont);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#a37c3b6abcdf4c32a6e45b262a16cc157">schermataMenu</a>(ALLEGRO_BITMAP *sfondoMenu,ALLEGRO_FONT *menuFont,ALLEGRO_FONT *font);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#a7db08f1e1a7c21f681944418ff37729a">schermataPausa</a>(ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *font);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="render_8h.html#aad142aabd13df1d53dbbbfccdb3d000d">schermataGameover</a>(ALLEGRO_BITMAP *sfondoGameover,ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *punteggioFont, ALLEGRO_FONT *font, <span class="keyword">const</span> <span class="keywordtype">int</span> punteggio);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="ttc" id="render_8h_html_a880cc78703c57ee6bca816d3eeb284ed"><div class="ttname"><a href="render_8h.html#a880cc78703c57ee6bca816d3eeb284ed">disegnaPlayer</a></div><div class="ttdeci">void disegnaPlayer(Player ship)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:28</div></div>
+<div class="ttc" id="structMeteora_html"><div class="ttname"><a href="structMeteora.html">Meteora</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:88</div></div>
+<div class="ttc" id="structPlayer_html"><div class="ttname"><a href="structPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:51</div></div>
+<div class="ttc" id="render_8h_html_a8b9e10983157ca0054df8e332ce1af23"><div class="ttname"><a href="render_8h.html#a8b9e10983157ca0054df8e332ce1af23">disegnaMeteore</a></div><div class="ttdeci">void disegnaMeteore(Meteora meteora[], int nmax, ALLEGRO_BITMAP *iconaMeteora)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:108</div></div>
+<div class="ttc" id="render_8h_html_aab259b7ee9f841c688528a0be8d0e40f"><div class="ttname"><a href="render_8h.html#aab259b7ee9f841c688528a0be8d0e40f">disegnaColpo</a></div><div class="ttdeci">void disegnaColpo(Colpo colpi[], int nmax)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:95</div></div>
+<div class="ttc" id="render_8h_html_aad142aabd13df1d53dbbbfccdb3d000d"><div class="ttname"><a href="render_8h.html#aad142aabd13df1d53dbbbfccdb3d000d">schermataGameover</a></div><div class="ttdeci">void schermataGameover(ALLEGRO_BITMAP *sfondoGameover, ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *punteggioFont, ALLEGRO_FONT *font, const int punteggio)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:72</div></div>
+<div class="ttc" id="structColpo_html"><div class="ttname"><a href="structColpo.html">Colpo</a></div><div class="ttdef"><b>Definition:</b> oggetti.h:66</div></div>
+<div class="ttc" id="render_8h_html_a37c3b6abcdf4c32a6e45b262a16cc157"><div class="ttname"><a href="render_8h.html#a37c3b6abcdf4c32a6e45b262a16cc157">schermataMenu</a></div><div class="ttdeci">void schermataMenu(ALLEGRO_BITMAP *sfondoMenu, ALLEGRO_FONT *menuFont, ALLEGRO_FONT *font)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:47</div></div>
+<div class="ttc" id="render_8h_html_a7db08f1e1a7c21f681944418ff37729a"><div class="ttname"><a href="render_8h.html#a7db08f1e1a7c21f681944418ff37729a">schermataPausa</a></div><div class="ttdeci">void schermataPausa(ALLEGRO_FONT *gameoverFont, ALLEGRO_FONT *font)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:58</div></div>
+<div class="ttc" id="render_8h_html_a3170bab04b6170e9e45c2fd6af52d00f"><div class="ttname"><a href="render_8h.html#a3170bab04b6170e9e45c2fd6af52d00f">playerStat</a></div><div class="ttdeci">void playerStat(Player ship, ALLEGRO_BITMAP *cuore, ALLEGRO_FONT *textFont)</div><div class="ttdef"><b>Definition:</b> videoRender.cc:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mar 16 Giu 2015 11:28:51 per ASTEROIDS da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

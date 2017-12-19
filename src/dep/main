@@ -1,0 +1,2 @@
+main.o: main.cc ../lib/oggetti.h ../lib/inizializzazione.h ../lib/gioco.h \
+ ../lib/render.h
