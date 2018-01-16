@@ -13,7 +13,7 @@ DEB_NAME = SE_Debug
 #VPATH = src:../include
 
 #-----Dichiarazione esplicita dei Phony Target
-.PHONY: depend debug clean cleanall
+.PHONY: depend debug clean cleanall install
 
 
 SpaceEffect: main.o creazione.o playTime.o videoRender.o
@@ -27,6 +27,8 @@ depend:
 	g++ -MM -I../lib playTime.cc > dep/playTime
 	g++ -MM -I../lib videoRender.cc > dep/videoRender
 
+install:
+	apt-get install liballegro5-dev liballegro-acodec5-dev liballegro-audio5-dev liballegro-dialog5-dev liballegro-image5-dev liballegro-physfs5-dev liballegro-ttf5-dev 
 
 
 
