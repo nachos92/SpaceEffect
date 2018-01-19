@@ -1,5 +1,7 @@
 1) cd SpaceEffect/src
-1bis) sudo make install
+
+//Per installare le librerie necessarie per la compilazione.
+#) make install
 
 2) make depend
 3) make
