@@ -28,7 +28,7 @@ depend:
 	g++ -MM -I../lib videoRender.cc > dep/videoRender
 
 install:
-	apt-get install liballegro5-dev liballegro-acodec5-dev liballegro-audio5-dev liballegro-dialog5-dev liballegro-image5-dev liballegro-physfs5-dev liballegro-ttf5-dev 
+	sudo apt-get install liballegro5-dev liballegro-acodec5-dev liballegro-audio5-dev liballegro-dialog5-dev liballegro-image5-dev liballegro-physfs5-dev liballegro-ttf5-dev 
 
 
 
